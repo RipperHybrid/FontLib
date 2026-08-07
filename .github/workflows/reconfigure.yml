@@ -1,0 +1,427 @@
+name: Reconfigure
+
+on:
+  push:
+    branches:
+      - Master
+    paths-ignore:
+      - "fonts.json"
+      - "Preview.md"
+      - "patched.json"
+  workflow_dispatch:
+    inputs:
+      patch_mode:
+        description: "Patching Mode"
+        required: true
+        default: "Ignore Patched"
+        type: choice
+        options:
+          - Ignore Patched
+          - Force Patch
+
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check for new or changed fonts
+        id: check
+        shell: python
+        env:
+          FORCE_PATCH: ${{ github.event.inputs.patch_mode == 'Force Patch' && 'true' || 'false' }}
+        run: |
+          import os
+          import json
+          import hashlib
+
+          STATE_FILE = "patched.json"
+          FONTS_ROOT = "Fonts"
+          DONOR_PATH = os.path.join(FONTS_ROOT, "Roboto-Regular", "Roboto-Regular.ttf")
+          FORCE_PATCH = os.environ.get("FORCE_PATCH") == "true"
+
+          def sha256_of(path):
+              h = hashlib.sha256()
+              with open(path, "rb") as fh:
+                  for chunk in iter(lambda: fh.read(65536), b""):
+                      h.update(chunk)
+              return h.hexdigest()
+
+          needs_patch = False
+
+          if FORCE_PATCH:
+              needs_patch = True
+          elif os.path.isfile(DONOR_PATH):
+              donor_hash = sha256_of(DONOR_PATH)
+              state = {}
+              if os.path.isfile(STATE_FILE):
+                  with open(STATE_FILE, "r") as f:
+                      state = json.load(f)
+
+              for folder in sorted(os.listdir(FONTS_ROOT)):
+                  folder_path = os.path.join(FONTS_ROOT, folder)
+                  if not os.path.isdir(folder_path) or folder == "Roboto-Regular":
+                      continue
+                  for f in sorted(os.listdir(folder_path)):
+                      if not f.lower().endswith((".ttf", ".otf")):
+                          continue
+                      full_path = os.path.join(folder_path, f)
+                      rel_path = os.path.relpath(full_path)
+                      current_hash = sha256_of(full_path)
+                      record = state.get(rel_path)
+                      if not (record and record.get("patched_sha256") == current_hash and record.get("donor_sha256") == donor_hash):
+                          needs_patch = True
+                          break
+                  if needs_patch:
+                      break
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as gh:
+              gh.write(f"needs_patch={'true' if needs_patch else 'false'}\n")
+
+      - name: Install FontForge
+        if: steps.check.outputs.needs_patch == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fontforge python3-fontforge
+
+      - name: Patch Missing Font Glyphs
+        if: steps.check.outputs.needs_patch == 'true'
+        run: |
+          set -o pipefail
+          fontforge -lang=py -script .github/scripts/patch_fonts.py 2>&1 | grep -vE "Bad device table|unexpected size for an instance"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfontconfig1 libgl1 libegl1 libglib2.0-0
+          pip install Pillow skia-python --break-system-packages
+
+      - name: Auto-generate Font Previews
+        shell: python
+        run: |
+          import os
+          from PIL import Image, ImageDraw, ImageFont
+          import skia
+
+          repo_dir = os.getcwd()
+          allowed_ext = (".ttf", ".otf")
+
+          BG = (30, 37, 46)
+          FG = (232, 237, 242)
+          ACCENT = (77, 184, 255)
+          WARNING_COLOR = (255, 77, 77)
+          W, H = 800, 450
+          MARGIN = 40
+          LINE_GAP = 22
+          NAME_BLOCK_GAP = 24
+
+          text_variants = {
+              "Fonts": [
+                  ("ABCDEFGHIJKLMNOPQRSTUVWXYZ", FG),
+                  ("abcdefghijklmnopqrstuvwxyz", FG),
+                  ("0 1 2 3 4 5 6 7 8 9", ACCENT),
+                  ("! @ # $ % ^ & * ()", ACCENT),
+                  ("ᴇᴛ ᴠᴏɪʟᴀ", FG),
+              ],
+              "Emoji": [
+                  ("🙂 🤡 👺 🥳 🫪", FG),
+                  ("👾 👽 👻 🪊 🤯", FG),
+                  ("🥀 🎉 🫯 ✨ 🪩", ACCENT),
+                  ("🔪 🫈 ☕ 🛡️ ☣️", ACCENT),
+                  ("🪎 🎭 🕹️ 🌚 🤓", FG),
+              ]
+          }
+
+          warning_msg = "* Tofu/Boxes = Missing glyphs"
+
+          for category in ["Fonts", "Emoji"]:
+              cat_path = os.path.join(repo_dir, category)
+              if not os.path.isdir(cat_path):
+                  continue
+
+              lines = text_variants[category]
+
+              for folder in os.listdir(cat_path):
+                  folder_path = os.path.join(cat_path, folder)
+                  if not os.path.isdir(folder_path):
+                      continue
+
+                  fonts = [f for f in sorted(os.listdir(folder_path))
+                           if f.lower().endswith(allowed_ext)]
+                  if not fonts:
+                      continue
+
+                  for f in os.listdir(folder_path):
+                      if f.lower().endswith((".png", ".jpg", ".jpeg")):
+                          try:
+                              os.remove(os.path.join(folder_path, f))
+                          except Exception:
+                              pass
+
+                  font_path = os.path.join(folder_path, fonts[0])
+                  font_stem = os.path.splitext(fonts[0])[0]
+                  out_path = os.path.join(folder_path, f"{font_stem}.png")
+
+                  if category == "Fonts":
+                      try:
+                          img = Image.new("RGB", (W, H), BG)
+                          draw = ImageDraw.Draw(img)
+                          max_width = W - MARGIN * 2
+
+                          def all_fit(fs):
+                              f = ImageFont.truetype(font_path, fs)
+                              for text, _ in lines:
+                                  bbox = draw.textbbox((0, 0), text, font=f)
+                                  if bbox[2] - bbox[0] > max_width:
+                                      return False
+                              return True
+
+                          font_size = 40
+                          while font_size > 10 and not all_fit(font_size):
+                              font_size -= 2
+                          font = ImageFont.truetype(font_path, font_size)
+
+                          name_font_size = max(30, int(font_size * 0.9))
+                          name_font = ImageFont.truetype(font_path, name_font_size)
+                          name_bbox = draw.textbbox((0, 0), font_stem, font=name_font)
+                          name_h = name_bbox[3] - name_bbox[1]
+
+                          heights = []
+                          for text, _ in lines:
+                              bbox = draw.textbbox((0, 0), text, font=font)
+                              heights.append(bbox[3] - bbox[1])
+
+                          block_h = sum(heights) + LINE_GAP * (len(lines) - 1)
+                          total_h = name_h + NAME_BLOCK_GAP + block_h
+                          y = (H - total_h) / 2
+
+                          name_w = name_bbox[2] - name_bbox[0]
+                          draw.text(((W - name_w) / 2 - name_bbox[0], y - name_bbox[1]), font_stem, font=name_font, fill=ACCENT)
+                          y += name_h + NAME_BLOCK_GAP
+
+                          for (text, color), h in zip(lines, heights):
+                              bbox = draw.textbbox((0, 0), text, font=font)
+                              tw = bbox[2] - bbox[0]
+                              x = (W - tw) / 2 - bbox[0]
+                              draw.text((x, y - bbox[1]), text, font=font, fill=color)
+                              y += h + LINE_GAP
+
+                          warn_font = ImageFont.truetype(font_path, 16)
+                          warn_bbox = draw.textbbox((0, 0), warning_msg, font=warn_font)
+                          warn_w = warn_bbox[2] - warn_bbox[0]
+                          draw.text(((W - warn_w) / 2 - warn_bbox[0], H - 25 - warn_bbox[1]), warning_msg, font=warn_font, fill=WARNING_COLOR)
+
+                          img.save(out_path)
+                      except Exception:
+                          pass
+
+                  elif category == "Emoji":
+                      try:
+                          surface = skia.Surface(W, H)
+                          canvas = surface.getCanvas()
+                          canvas.clear(skia.ColorSetARGB(255, BG[0], BG[1], BG[2]))
+
+                          font_size = 40
+                          name_font_size = 30
+
+                          title_typeface = skia.Typeface.MakeDefault()
+                          title_font = skia.Font(title_typeface, name_font_size)
+                          title_paint = skia.Paint(Color=skia.ColorSetARGB(255, ACCENT[0], ACCENT[1], ACCENT[2]), AntiAlias=True)
+
+                          emoji_typeface = skia.Typeface.MakeFromFile(font_path)
+                          emoji_font = skia.Font(emoji_typeface, font_size)
+
+                          title_w = title_font.measureText(font_stem)
+
+                          total_h = name_font_size + NAME_BLOCK_GAP + (len(lines) * font_size) + (LINE_GAP * (len(lines) - 1))
+                          start_y = (H - total_h) / 2
+
+                          current_y = start_y + name_font_size
+                          canvas.drawString(font_stem, (W - title_w) / 2, current_y, title_font, title_paint)
+
+                          current_y += NAME_BLOCK_GAP + font_size
+
+                          tofu_w = font_size * 0.6
+                          tofu_h = font_size * 0.8
+                          tofu_paint = skia.Paint(
+                              Color=skia.ColorSetARGB(255, WARNING_COLOR[0], WARNING_COLOR[1], WARNING_COLOR[2]),
+                              Style=skia.Paint.kStroke_Style,
+                              StrokeWidth=2,
+                              AntiAlias=True
+                          )
+
+                          num_cols = max(len(text.split(" ")) for text, _ in lines)
+                          col_w = (W - (MARGIN * 2)) / num_cols
+
+                          for text, color in lines:
+                              text_paint = skia.Paint(Color=skia.ColorSetARGB(255, color[0], color[1], color[2]), AntiAlias=True)
+                              items = text.split(" ")
+
+                              row_w = len(items) * col_w
+                              start_x = (W - row_w) / 2
+
+                              for i, item in enumerate(items):
+                                  try:
+                                      glyphs = emoji_font.textToGlyphs(item)
+                                      if len(glyphs) == 0 or glyphs[0] == 0:
+                                          w = tofu_w
+                                          missing = True
+                                      else:
+                                          w = emoji_font.measureText(item)
+                                          w = w if w > 0 else font_size
+                                          missing = False
+                                  except Exception:
+                                      w = emoji_font.measureText(item)
+                                      if w == 0:
+                                          w = tofu_w
+                                          missing = True
+                                      else:
+                                          missing = False
+
+                                  cell_center_x = start_x + (i * col_w) + (col_w / 2)
+
+                                  if missing:
+                                      rect = skia.Rect.MakeXYWH(cell_center_x - (tofu_w / 2), current_y - tofu_h, tofu_w, tofu_h)
+                                      canvas.drawRect(rect, tofu_paint)
+                                  else:
+                                      canvas.drawString(item, cell_center_x - (w / 2), current_y, emoji_font, text_paint)
+
+                              current_y += font_size + LINE_GAP
+
+                          warn_font = skia.Font(title_typeface, 16)
+                          warn_paint = skia.Paint(Color=skia.ColorSetARGB(255, WARNING_COLOR[0], WARNING_COLOR[1], WARNING_COLOR[2]), AntiAlias=True)
+                          warn_w = warn_font.measureText(warning_msg)
+                          canvas.drawString(warning_msg, (W - warn_w) / 2, H - 15, warn_font, warn_paint)
+
+                          image = surface.makeImageSnapshot()
+                          image.save(out_path, skia.kPNG)
+                      except Exception:
+                          pass
+
+      - name: Generate Metadata
+        shell: python
+        env:
+          GIT_REPO: ${{ github.repository }}
+          GIT_REF: ${{ github.ref_name }}
+        run: |
+          import os
+          import json
+          import hashlib
+          from urllib.parse import quote
+
+          repo = os.environ.get("GIT_REPO")
+          branch = os.environ.get("GIT_REF")
+          base_url = f"https://raw.githubusercontent.com/{repo}/{branch}"
+
+          repo_dir = os.getcwd()
+          output_json = os.path.join(repo_dir, "fonts.json")
+          output_md = os.path.join(repo_dir, "Preview.md")
+
+          data = {}
+          md_content = "## Emojis and Fonts Preview\n\n"
+
+          allowed_extensions = {".ttf", ".otf"}
+          categories = ["Emoji", "Fonts"]
+
+          def sha256_of(path):
+              h = hashlib.sha256()
+              with open(path, "rb") as fh:
+                  for chunk in iter(lambda: fh.read(65536), b""):
+                      h.update(chunk)
+              return h.hexdigest()
+
+          for category in sorted(categories):
+              category_path = os.path.join(repo_dir, category)
+
+              if not os.path.isdir(category_path):
+                  continue
+
+              md_content += f"<details>\n<summary><b>{category}</b></summary>\n\n"
+
+              data[category] = {}
+
+              for folder in sorted(os.listdir(category_path), key=str.lower):
+                  folder_path = os.path.join(category_path, folder)
+
+                  if os.path.isdir(folder_path):
+
+                      scan_fonts = [
+                          f for f in sorted(os.listdir(folder_path), key=str.lower)
+                          if os.path.isfile(os.path.join(folder_path, f)) and f.endswith(tuple(allowed_extensions))
+                      ]
+
+                      files_list = []
+                      for f in scan_fonts:
+                          file_path = os.path.join(folder_path, f)
+                          file_size = os.path.getsize(file_path)
+                          file_sha256 = sha256_of(file_path)
+                          raw_url = f"{base_url}/{quote(f'{category}/{folder}/{f}')}"
+
+                          files_list.append({
+                              "filename": f,
+                              "download_url": raw_url,
+                              "size_bytes": file_size,
+                              "sha256": file_sha256
+                          })
+
+                      scan_imgs = [
+                          f for f in sorted(os.listdir(folder_path), key=str.lower)
+                          if os.path.isfile(os.path.join(folder_path, f)) and f.endswith(".png")
+                      ]
+
+                      preview_url = None
+                      if scan_imgs:
+                          preview_url = f"{base_url}/{quote(f'{category}/{folder}/{scan_imgs[0]}')}"
+
+                          md_content += f"### {folder}\n"
+                          for img in scan_imgs:
+                              img_url = f"{base_url}/{quote(f'{category}/{folder}/{img}')}"
+                              md_content += f'- <img src="{img_url}" width="200px" alt="{folder}">\n'
+                          md_content += "\n"
+
+                      if files_list:
+                          data[category][folder] = {
+                              "preview": preview_url,
+                              "files": files_list
+                          }
+
+              md_content += "</details>\n\n"
+
+          with open(output_json, "w") as json_file:
+              json.dump(data, json_file, indent=2)
+
+          with open(output_md, "w") as md_file:
+              md_file.write(md_content)
+
+      - name: Commit and Push to GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add fonts.json Preview.md Fonts Emoji
+          [ -f patched.json ] && git add patched.json
+          git commit -m "Auto-update Font metadata, previews & Preview [skip ci]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }} || echo "No changes to push"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push to GitLab
+        if: github.ref_name == 'Master'
+        continue-on-error: true
+        env:
+          TARGET_REPO: "gitlab.com/RipperHybrid/FontLib.git"
+        run: |
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@${{ env.TARGET_REPO }}
+          git push gitlab HEAD:${{ github.ref_name }} --force
+          git push gitlab --tags --force
