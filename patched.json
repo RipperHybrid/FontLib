@@ -1,0 +1,182 @@
+{
+  "Fonts/Ablax/Ablax.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "5289e477664c24a5f3d85dc7ed4c343b8760c16f2639648f12f573599bd5e8ba"
+  },
+  "Fonts/Accuratist/Accuratist.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "cda2d275f2ee0c0acd75ead01f112f1fcfa81bdcbcd04bb909e9605ce311369c"
+  },
+  "Fonts/ActionMan/ActionMan.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "e9c079fa02a420c99e0c644d11b8f107f587c961f84964c44ba9a50546485378"
+  },
+  "Fonts/Beauty/Beauty.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "fa2c22a6efd4f42e02230e356010dda9d9b5c54e635ac41c4bf00242242d5cc1"
+  },
+  "Fonts/Biko/Biko.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "4e63eac688193bccc76ec0cc7b7396331fa855ba34a1bfad0a187cbcb00f6668"
+  },
+  "Fonts/Brandayolq/Brandayolq.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "678bbcfd873a5cf4485cf584b67d3f77cc1d35f16818bd1ae6c1c6d2435dcbe6"
+  },
+  "Fonts/Cagliostro/Cagliostro.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "2a8a72d0c176084a66e0113502c866f771c24ca46b2c6ead3c8ff1e2848f2f36"
+  },
+  "Fonts/Chococooky/Chococooky.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "1c757681602cc0734fb12400ac25395ffe8c153ee1caede2aac8ca7944f7915a"
+  },
+  "Fonts/Cocon/Cocon.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "7d8ba34861a44104484616a678e823cffe59d5c7555aeb75d6bb1a309c03a3a6"
+  },
+  "Fonts/ComicBook/ComicBook.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "041405a12aa2c2f1a8efb61d7fbffbf650e714675fe9d0c90bc4a6f5d7f97855"
+  },
+  "Fonts/ComingSoon/ComingSoon.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "f731fea597c85ceb2b0043ad0148e0c8906e98084205d0783e58aa6b567816ff"
+  },
+  "Fonts/CookieRun/CookieRun.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "4e80710eda612dcf1b4e527c26d897a08556980b070746952b90b67024d4550a"
+  },
+  "Fonts/CoolStory/CoolStory.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "b56701e2b9cca9bcdd9d3dcf067db27eb9ccf69f8d01112d2f2c40cce9be3b2e"
+  },
+  "Fonts/Cooljazz/Cooljazz.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "4aaafb4608e1d03055c6ab705882307472a65d0cc9fa5b8bca3bf0906ede2372"
+  },
+  "Fonts/EvolveSans/EvolveSans.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "534ea4a9a837e3b1f0506593e17fc12fbcf099045f658b7e638a38765792fa62"
+  },
+  "Fonts/Exotwo/ExoTwo.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "93036a6c6e8ebe93ef685ebd1a165ac5cf1ea461155486e92531aa170edcf41f"
+  },
+  "Fonts/Flow/Flow.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "4c8f00f7470cb7d35d8153569a1b9406efac02484d14610378e7caaac1fa0d0e"
+  },
+  "Fonts/GoogleSans/GoogleSans.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "e9f0f94bf21ea9eed44b43a861b1993f1258e4166cfccc2e06f0e0741c70d51e"
+  },
+  "Fonts/GoogleSansFlex/GoogleSansFlex.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "5d6b21fe6d08886d029a60bf2c19adb374efc2c4f7009e61732b7977c2722601"
+  },
+  "Fonts/Holiday/Holiday.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "2fc96dc72d0a669590be5908a2e986c03df590addb53619cfe3a380bbfa1cd8d"
+  },
+  "Fonts/Ios/Ios.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "79930ab57117877bbed7f38bc29131ac0a1db9425740d860e68b7137af63d17d"
+  },
+  "Fonts/Linotte/Linotte.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "aa669149d82c8b1b93d4ea0b8374449409c635090f56d8951e62607d84eff30a"
+  },
+  "Fonts/Love/Love.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "593681dd194a2dfb1ae72348bb70c8c5fe1e524789b915436ab5c64c5502e308"
+  },
+  "Fonts/MangoliRegular/Mangoli-Regular.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "4207cbff8d014ba0432e2462bf1990e049ee0e6af0a7f808472601b6a9776921"
+  },
+  "Fonts/Marko/Marko.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "f2eca0a14251b33761d9b70fe07aba4a8eee3d42e1859d5c08e31852e4d23ef2"
+  },
+  "Fonts/Marshmallow/Marshmallow.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "a43d133c7e24aae4f3384706c248636b272387e948716db78efde27621af7863"
+  },
+  "Fonts/Marvel/Marvel.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "85c47477a8915d85cbc4dfdef7f990cd7ef7d22a2122b7f439354bfd8b484474"
+  },
+  "Fonts/Minecraft/Minecraft.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "ac5764f19db615d66a178a73fafe9ee75c1173bbbd3150ae63a7b446f32efd71"
+  },
+  "Fonts/NType82-Headline/NType82-Headline.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "05ac673f70ce6ca1742b16b164fce43f4d709741731807a2439b44b8c43087d9"
+  },
+  "Fonts/NType82-Regular/NType82-Regular.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "81117b3909c91b90d192ddfc78e8ca34a7c5433e745e8829a58c8cac1be622a2"
+  },
+  "Fonts/Ndot/Ndot.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "0ff1f5c2a131e6f07a34d65754c9b03e98f839b62299563ca7a3073fdb2c03b7"
+  },
+  "Fonts/Odin/Odin.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "3927f8f6a4ef5513a5a4dd6f2bb8188f2e24fe6af9b04e2c6ee552cd0e711615"
+  },
+  "Fonts/Paris/Paris.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "49346f2417d0a5ebad6a9687fdf3e735c270d2e7281dbf0da40fcbbcbf7c7d0a"
+  },
+  "Fonts/Polobrush/Polobrush.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "ece3763f078be640539ded851a1e0edf400b90edd9caefc23884297b4e9ff3d2"
+  },
+  "Fonts/ProductSans/Product_Sans_Regular.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "85023e88ad2de7c574ae4c594337a1a3c2b0b4c78ab7f43e46b1e194ce26ecbe"
+  },
+  "Fonts/ReemKufi/ReemKufi.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "d176c726337cd3fafd2342a58bece2d7f0ea3a356a4b5c807dc1d8a8bf4617d2"
+  },
+  "Fonts/Riviera/Riviera.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "149e97dad7d8e05d01aa7e80160c4e85a6ca6ef28527cf331e0532e0cf91284d"
+  },
+  "Fonts/Rosemary/Rosemary.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "f17842f313ab1ad50e2e9d08f45c78241bb7546278b611753653d0a4bf8732b5"
+  },
+  "Fonts/SiswadiArchitect/SiswadiArchitect.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "8c3761a8363c57e463ba44d0897827c466c3a264d2a8aea5149c89e0fe409e77"
+  },
+  "Fonts/SkateSonic/SkateSonic.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "2a9e4fb261a7f5856bdb0cddd9863299cde6951f17afc4a5bf654bbdb7c0750d"
+  },
+  "Fonts/Stanberry/Stanberry.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "8a9a4c3563729ec6b797c527a453bcc3b8b70792d5908fa756ca6473dc05c7fd"
+  },
+  "Fonts/Storopia/Storopia.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "8a4c28028491d0e86c845801f529bc9facd2ab2d78e41633d2627a89e21d2d8c"
+  },
+  "Fonts/TheConfession/TheConfession.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "0260011e9c3c3d2ec9b33ab4a312406a122dc75ee56a6eae01eff252a5b8ba23"
+  },
+  "Fonts/Ubuntu/Ubuntu.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "6532c333d67670a9c86c545bd5958c124c1261902be98932efc1817e4d3eee74"
+  },
+  "Fonts/WaltDisney/WaltDisney.ttf": {
+    "donor_sha256": "d5633ff957d2ecb1ce7716e86e11057091c3526042efe16fe1f65dfc06a65551",
+    "patched_sha256": "0a27ba58666fbe0e89df26e9dacc182086e3357deefd67f5534d32ff9f64ff87"
+  }
+}

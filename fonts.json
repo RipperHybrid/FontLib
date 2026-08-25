@@ -1,0 +1,633 @@
+{
+  "Emoji": {
+    "BlobEmoji": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/BlobEmoji/Blobmoji_17r1.png",
+      "files": [
+        {
+          "filename": "Blobmoji_17r1.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/BlobEmoji/Blobmoji_17r1.ttf",
+          "size_bytes": 9733936,
+          "sha256": "b15dde21ad0db02187c688ff7e36f667155e6c0dff3536400e0083ed19871044"
+        }
+      ]
+    },
+    "Facebook": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Facebook/Facebook_16.0.png",
+      "files": [
+        {
+          "filename": "Facebook_16.0.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Facebook/Facebook_16.0.ttf",
+          "size_bytes": 39385824,
+          "sha256": "cbc3cd1cf0a45518645edb8c36424253f48b1e9f7a4566564c01af32f9bbc2bb"
+        }
+      ]
+    },
+    "FluentUI": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_16.0.png",
+      "files": [
+        {
+          "filename": "FluentUI_16.0.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_16.0.ttf",
+          "size_bytes": 25207620,
+          "sha256": "38486aa7e7ba423c4acaf6556126d7c793680e5b63c78687b29d2c2f741a90e1"
+        }
+      ]
+    },
+    "Ios": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Ios/iOS26_v14.png",
+      "files": [
+        {
+          "filename": "iOS26_v14.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Ios/iOS26_v14.ttf",
+          "size_bytes": 35321980,
+          "sha256": "f06ab19cd58f6c42ee7e367205e54dd7931c1344b641b977a415a279cf11319f"
+        }
+      ]
+    },
+    "JoyPixel": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/JoyPixel/JoyPixel_10.png",
+      "files": [
+        {
+          "filename": "JoyPixel_10.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/JoyPixel/JoyPixel_10.ttf",
+          "size_bytes": 27536976,
+          "sha256": "f4fca7e5579b86cf721d30918f0d315906a2dc24dd5006121eca2f30924a3c9c"
+        }
+      ]
+    },
+    "LG": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/LG/LG_u14.png",
+      "files": [
+        {
+          "filename": "LG_u14.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/LG/LG_u14.ttf",
+          "size_bytes": 23440092,
+          "sha256": "b13e2b8d69342ab3f0d4b7d9574e1ee9cc3fa4838f0d21d79d32841bd835c027"
+        }
+      ]
+    },
+    "NotoColorEmoji": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/NotoColorEmoji/NotoColorEmoji.png",
+      "files": [
+        {
+          "filename": "NotoColorEmoji.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/NotoColorEmoji/NotoColorEmoji.ttf",
+          "size_bytes": 41270076,
+          "sha256": "251ddb56c5f9637d1b4e0e3ae18e2a02e758e5497fd1f9ba34db3131871d5c79"
+        }
+      ]
+    },
+    "OpenEmoji": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/OpenEmoji/Openmoji_16.0.png",
+      "files": [
+        {
+          "filename": "Openmoji_16.0.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/OpenEmoji/Openmoji_16.0.ttf",
+          "size_bytes": 11031324,
+          "sha256": "09ce54e3f2eeb7f4e97a14394625cb131431a19128004e2b2ec4937c9a5f1b19"
+        }
+      ]
+    },
+    "SamsungOneUi5": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/SamsungOneUi5/SamsungOneUI5_beta4.png",
+      "files": [
+        {
+          "filename": "SamsungOneUI5_beta4.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/SamsungOneUi5/SamsungOneUI5_beta4.ttf",
+          "size_bytes": 15665612,
+          "sha256": "919c237cf7be875f7fe01621d320cc80a76aeeeca83dc60833b91af61a09c762"
+        }
+      ]
+    },
+    "SamsungOneUi8": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/SamsungOneUi8/OneUI8.5_v15.png",
+      "files": [
+        {
+          "filename": "OneUI8.5_v15.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/SamsungOneUi8/OneUI8.5_v15.ttf",
+          "size_bytes": 20524944,
+          "sha256": "650e1d7cfa34c6bb42283625b8da4cc4e87227dc9bc441bee66479062ad90d5c"
+        }
+      ]
+    },
+    "Twemoji": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Twemoji/Twemoji_16.0.1.png",
+      "files": [
+        {
+          "filename": "Twemoji_16.0.1.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Twemoji/Twemoji_16.0.1.ttf",
+          "size_bytes": 8938468,
+          "sha256": "16d65c97630b24c220c79f16e92f9bc27c5a781aa7769fa367df000b070acab4"
+        }
+      ]
+    },
+    "Whatsapp": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Whatsapp/WhatsApp_2.26.8.72.png",
+      "files": [
+        {
+          "filename": "WhatsApp_2.26.8.72.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Whatsapp/WhatsApp_2.26.8.72.ttf",
+          "size_bytes": 35354732,
+          "sha256": "c151108bb31e54eaa00b5ad026b5c5c670074113e22a7882b66b2d676c032afa"
+        }
+      ]
+    }
+  },
+  "Fonts": {
+    "Ablax": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ablax/Ablax.png",
+      "files": [
+        {
+          "filename": "Ablax.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ablax/Ablax.ttf",
+          "size_bytes": 657020,
+          "sha256": "5289e477664c24a5f3d85dc7ed4c343b8760c16f2639648f12f573599bd5e8ba"
+        }
+      ]
+    },
+    "Accuratist": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Accuratist/Accuratist.png",
+      "files": [
+        {
+          "filename": "Accuratist.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Accuratist/Accuratist.ttf",
+          "size_bytes": 622796,
+          "sha256": "cda2d275f2ee0c0acd75ead01f112f1fcfa81bdcbcd04bb909e9605ce311369c"
+        }
+      ]
+    },
+    "ActionMan": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ActionMan/ActionMan.png",
+      "files": [
+        {
+          "filename": "ActionMan.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ActionMan/ActionMan.ttf",
+          "size_bytes": 2405828,
+          "sha256": "e9c079fa02a420c99e0c644d11b8f107f587c961f84964c44ba9a50546485378"
+        }
+      ]
+    },
+    "Beauty": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Beauty/Beauty.png",
+      "files": [
+        {
+          "filename": "Beauty.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Beauty/Beauty.ttf",
+          "size_bytes": 391076,
+          "sha256": "fa2c22a6efd4f42e02230e356010dda9d9b5c54e635ac41c4bf00242242d5cc1"
+        }
+      ]
+    },
+    "Biko": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Biko/Biko.png",
+      "files": [
+        {
+          "filename": "Biko.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Biko/Biko.ttf",
+          "size_bytes": 630312,
+          "sha256": "4e63eac688193bccc76ec0cc7b7396331fa855ba34a1bfad0a187cbcb00f6668"
+        }
+      ]
+    },
+    "Brandayolq": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Brandayolq/Brandayolq.png",
+      "files": [
+        {
+          "filename": "Brandayolq.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Brandayolq/Brandayolq.ttf",
+          "size_bytes": 675748,
+          "sha256": "678bbcfd873a5cf4485cf584b67d3f77cc1d35f16818bd1ae6c1c6d2435dcbe6"
+        }
+      ]
+    },
+    "Cagliostro": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cagliostro/Cagliostro.png",
+      "files": [
+        {
+          "filename": "Cagliostro.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cagliostro/Cagliostro.ttf",
+          "size_bytes": 621520,
+          "sha256": "2a8a72d0c176084a66e0113502c866f771c24ca46b2c6ead3c8ff1e2848f2f36"
+        }
+      ]
+    },
+    "Chococooky": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Chococooky/Chococooky.png",
+      "files": [
+        {
+          "filename": "Chococooky.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Chococooky/Chococooky.ttf",
+          "size_bytes": 678624,
+          "sha256": "1c757681602cc0734fb12400ac25395ffe8c153ee1caede2aac8ca7944f7915a"
+        }
+      ]
+    },
+    "Cocon": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cocon/Cocon.png",
+      "files": [
+        {
+          "filename": "Cocon.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cocon/Cocon.ttf",
+          "size_bytes": 614796,
+          "sha256": "7d8ba34861a44104484616a678e823cffe59d5c7555aeb75d6bb1a309c03a3a6"
+        }
+      ]
+    },
+    "ComicBook": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ComicBook/ComicBook.png",
+      "files": [
+        {
+          "filename": "ComicBook.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ComicBook/ComicBook.ttf",
+          "size_bytes": 618716,
+          "sha256": "041405a12aa2c2f1a8efb61d7fbffbf650e714675fe9d0c90bc4a6f5d7f97855"
+        }
+      ]
+    },
+    "ComingSoon": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ComingSoon/ComingSoon.png",
+      "files": [
+        {
+          "filename": "ComingSoon.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ComingSoon/ComingSoon.ttf",
+          "size_bytes": 428148,
+          "sha256": "f731fea597c85ceb2b0043ad0148e0c8906e98084205d0783e58aa6b567816ff"
+        }
+      ]
+    },
+    "CookieRun": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/CookieRun/CookieRun.png",
+      "files": [
+        {
+          "filename": "CookieRun.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/CookieRun/CookieRun.ttf",
+          "size_bytes": 2469500,
+          "sha256": "4e80710eda612dcf1b4e527c26d897a08556980b070746952b90b67024d4550a"
+        }
+      ]
+    },
+    "Cooljazz": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cooljazz/Cooljazz.png",
+      "files": [
+        {
+          "filename": "Cooljazz.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Cooljazz/Cooljazz.ttf",
+          "size_bytes": 2446356,
+          "sha256": "4aaafb4608e1d03055c6ab705882307472a65d0cc9fa5b8bca3bf0906ede2372"
+        }
+      ]
+    },
+    "CoolStory": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/CoolStory/CoolStory.png",
+      "files": [
+        {
+          "filename": "CoolStory.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/CoolStory/CoolStory.ttf",
+          "size_bytes": 636304,
+          "sha256": "b56701e2b9cca9bcdd9d3dcf067db27eb9ccf69f8d01112d2f2c40cce9be3b2e"
+        }
+      ]
+    },
+    "EvolveSans": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/EvolveSans/EvolveSans.png",
+      "files": [
+        {
+          "filename": "EvolveSans.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/EvolveSans/EvolveSans.ttf",
+          "size_bytes": 441072,
+          "sha256": "534ea4a9a837e3b1f0506593e17fc12fbcf099045f658b7e638a38765792fa62"
+        }
+      ]
+    },
+    "Exotwo": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Exotwo/ExoTwo.png",
+      "files": [
+        {
+          "filename": "ExoTwo.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Exotwo/ExoTwo.ttf",
+          "size_bytes": 611048,
+          "sha256": "93036a6c6e8ebe93ef685ebd1a165ac5cf1ea461155486e92531aa170edcf41f"
+        }
+      ]
+    },
+    "Flow": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Flow/Flow.png",
+      "files": [
+        {
+          "filename": "Flow.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Flow/Flow.ttf",
+          "size_bytes": 563888,
+          "sha256": "4c8f00f7470cb7d35d8153569a1b9406efac02484d14610378e7caaac1fa0d0e"
+        }
+      ]
+    },
+    "GoogleSans": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/GoogleSans/GoogleSans.png",
+      "files": [
+        {
+          "filename": "GoogleSans.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/GoogleSans/GoogleSans.ttf",
+          "size_bytes": 589436,
+          "sha256": "e9f0f94bf21ea9eed44b43a861b1993f1258e4166cfccc2e06f0e0741c70d51e"
+        }
+      ]
+    },
+    "GoogleSansFlex": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/GoogleSansFlex/GoogleSansFlex.png",
+      "files": [
+        {
+          "filename": "GoogleSansFlex.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/GoogleSansFlex/GoogleSansFlex.ttf",
+          "size_bytes": 487196,
+          "sha256": "5d6b21fe6d08886d029a60bf2c19adb374efc2c4f7009e61732b7977c2722601"
+        }
+      ]
+    },
+    "Holiday": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Holiday/Holiday.png",
+      "files": [
+        {
+          "filename": "Holiday.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Holiday/Holiday.ttf",
+          "size_bytes": 550940,
+          "sha256": "2fc96dc72d0a669590be5908a2e986c03df590addb53619cfe3a380bbfa1cd8d"
+        }
+      ]
+    },
+    "Ios": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ios/Ios.png",
+      "files": [
+        {
+          "filename": "Ios.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ios/Ios.ttf",
+          "size_bytes": 1297644,
+          "sha256": "79930ab57117877bbed7f38bc29131ac0a1db9425740d860e68b7137af63d17d"
+        }
+      ]
+    },
+    "Linotte": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Linotte/Linotte.png",
+      "files": [
+        {
+          "filename": "Linotte.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Linotte/Linotte.ttf",
+          "size_bytes": 437756,
+          "sha256": "aa669149d82c8b1b93d4ea0b8374449409c635090f56d8951e62607d84eff30a"
+        }
+      ]
+    },
+    "Love": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Love/Love.png",
+      "files": [
+        {
+          "filename": "Love.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Love/Love.ttf",
+          "size_bytes": 384224,
+          "sha256": "593681dd194a2dfb1ae72348bb70c8c5fe1e524789b915436ab5c64c5502e308"
+        }
+      ]
+    },
+    "MangoliRegular": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/MangoliRegular/Mangoli-Regular.png",
+      "files": [
+        {
+          "filename": "Mangoli-Regular.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/MangoliRegular/Mangoli-Regular.ttf",
+          "size_bytes": 403604,
+          "sha256": "4207cbff8d014ba0432e2462bf1990e049ee0e6af0a7f808472601b6a9776921"
+        }
+      ]
+    },
+    "Marko": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marko/Marko.png",
+      "files": [
+        {
+          "filename": "Marko.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marko/Marko.ttf",
+          "size_bytes": 639068,
+          "sha256": "f2eca0a14251b33761d9b70fe07aba4a8eee3d42e1859d5c08e31852e4d23ef2"
+        }
+      ]
+    },
+    "Marshmallow": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marshmallow/Marshmallow.png",
+      "files": [
+        {
+          "filename": "Marshmallow.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marshmallow/Marshmallow.ttf",
+          "size_bytes": 478324,
+          "sha256": "a43d133c7e24aae4f3384706c248636b272387e948716db78efde27621af7863"
+        }
+      ]
+    },
+    "Marvel": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marvel/Marvel.png",
+      "files": [
+        {
+          "filename": "Marvel.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Marvel/Marvel.ttf",
+          "size_bytes": 6487168,
+          "sha256": "85c47477a8915d85cbc4dfdef7f990cd7ef7d22a2122b7f439354bfd8b484474"
+        }
+      ]
+    },
+    "Minecraft": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Minecraft/Minecraft.png",
+      "files": [
+        {
+          "filename": "Minecraft.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Minecraft/Minecraft.ttf",
+          "size_bytes": 373632,
+          "sha256": "ac5764f19db615d66a178a73fafe9ee75c1173bbbd3150ae63a7b446f32efd71"
+        }
+      ]
+    },
+    "Ndot": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ndot/Ndot.png",
+      "files": [
+        {
+          "filename": "Ndot.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ndot/Ndot.ttf",
+          "size_bytes": 656000,
+          "sha256": "0ff1f5c2a131e6f07a34d65754c9b03e98f839b62299563ca7a3073fdb2c03b7"
+        }
+      ]
+    },
+    "NType82-Headline": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/NType82-Headline/NType82-Headline.png",
+      "files": [
+        {
+          "filename": "NType82-Headline.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/NType82-Headline/NType82-Headline.ttf",
+          "size_bytes": 412624,
+          "sha256": "05ac673f70ce6ca1742b16b164fce43f4d709741731807a2439b44b8c43087d9"
+        }
+      ]
+    },
+    "NType82-Regular": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/NType82-Regular/NType82-Regular.png",
+      "files": [
+        {
+          "filename": "NType82-Regular.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/NType82-Regular/NType82-Regular.ttf",
+          "size_bytes": 412676,
+          "sha256": "81117b3909c91b90d192ddfc78e8ca34a7c5433e745e8829a58c8cac1be622a2"
+        }
+      ]
+    },
+    "Odin": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Odin/Odin.png",
+      "files": [
+        {
+          "filename": "Odin.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Odin/Odin.ttf",
+          "size_bytes": 742540,
+          "sha256": "3927f8f6a4ef5513a5a4dd6f2bb8188f2e24fe6af9b04e2c6ee552cd0e711615"
+        }
+      ]
+    },
+    "Paris": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Paris/Paris.png",
+      "files": [
+        {
+          "filename": "Paris.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Paris/Paris.ttf",
+          "size_bytes": 384484,
+          "sha256": "49346f2417d0a5ebad6a9687fdf3e735c270d2e7281dbf0da40fcbbcbf7c7d0a"
+        }
+      ]
+    },
+    "Polobrush": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Polobrush/Polobrush.png",
+      "files": [
+        {
+          "filename": "Polobrush.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Polobrush/Polobrush.ttf",
+          "size_bytes": 421592,
+          "sha256": "ece3763f078be640539ded851a1e0edf400b90edd9caefc23884297b4e9ff3d2"
+        }
+      ]
+    },
+    "ProductSans": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ProductSans/Product_Sans_Regular.png",
+      "files": [
+        {
+          "filename": "Product_Sans_Regular.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ProductSans/Product_Sans_Regular.ttf",
+          "size_bytes": 413340,
+          "sha256": "85023e88ad2de7c574ae4c594337a1a3c2b0b4c78ab7f43e46b1e194ce26ecbe"
+        }
+      ]
+    },
+    "ReemKufi": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ReemKufi/ReemKufi.png",
+      "files": [
+        {
+          "filename": "ReemKufi.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/ReemKufi/ReemKufi.ttf",
+          "size_bytes": 651888,
+          "sha256": "d176c726337cd3fafd2342a58bece2d7f0ea3a356a4b5c807dc1d8a8bf4617d2"
+        }
+      ]
+    },
+    "Riviera": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Riviera/Riviera.png",
+      "files": [
+        {
+          "filename": "Riviera.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Riviera/Riviera.ttf",
+          "size_bytes": 372908,
+          "sha256": "149e97dad7d8e05d01aa7e80160c4e85a6ca6ef28527cf331e0532e0cf91284d"
+        }
+      ]
+    },
+    "Rosemary": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Rosemary/Rosemary.png",
+      "files": [
+        {
+          "filename": "Rosemary.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Rosemary/Rosemary.ttf",
+          "size_bytes": 1711944,
+          "sha256": "f17842f313ab1ad50e2e9d08f45c78241bb7546278b611753653d0a4bf8732b5"
+        }
+      ]
+    },
+    "SiswadiArchitect": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/SiswadiArchitect/SiswadiArchitect.png",
+      "files": [
+        {
+          "filename": "SiswadiArchitect.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/SiswadiArchitect/SiswadiArchitect.ttf",
+          "size_bytes": 650328,
+          "sha256": "8c3761a8363c57e463ba44d0897827c466c3a264d2a8aea5149c89e0fe409e77"
+        }
+      ]
+    },
+    "SkateSonic": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/SkateSonic/SkateSonic.png",
+      "files": [
+        {
+          "filename": "SkateSonic.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/SkateSonic/SkateSonic.ttf",
+          "size_bytes": 480480,
+          "sha256": "2a9e4fb261a7f5856bdb0cddd9863299cde6951f17afc4a5bf654bbdb7c0750d"
+        }
+      ]
+    },
+    "Stanberry": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Stanberry/Stanberry.png",
+      "files": [
+        {
+          "filename": "Stanberry.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Stanberry/Stanberry.ttf",
+          "size_bytes": 475372,
+          "sha256": "8a9a4c3563729ec6b797c527a453bcc3b8b70792d5908fa756ca6473dc05c7fd"
+        }
+      ]
+    },
+    "Storopia": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Storopia/Storopia.png",
+      "files": [
+        {
+          "filename": "Storopia.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Storopia/Storopia.ttf",
+          "size_bytes": 425164,
+          "sha256": "8a4c28028491d0e86c845801f529bc9facd2ab2d78e41633d2627a89e21d2d8c"
+        }
+      ]
+    },
+    "TheConfession": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/TheConfession/TheConfession.png",
+      "files": [
+        {
+          "filename": "TheConfession.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/TheConfession/TheConfession.ttf",
+          "size_bytes": 393780,
+          "sha256": "0260011e9c3c3d2ec9b33ab4a312406a122dc75ee56a6eae01eff252a5b8ba23"
+        }
+      ]
+    },
+    "Ubuntu": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ubuntu/Ubuntu.png",
+      "files": [
+        {
+          "filename": "Ubuntu.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/Ubuntu/Ubuntu.ttf",
+          "size_bytes": 543740,
+          "sha256": "6532c333d67670a9c86c545bd5958c124c1261902be98932efc1817e4d3eee74"
+        }
+      ]
+    },
+    "WaltDisney": {
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/WaltDisney/WaltDisney.png",
+      "files": [
+        {
+          "filename": "WaltDisney.ttf",
+          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Fonts/WaltDisney/WaltDisney.ttf",
+          "size_bytes": 593428,
+          "sha256": "0a27ba58666fbe0e89df26e9dacc182086e3357deefd67f5534d32ff9f64ff87"
+        }
+      ]
+    }
+  }
+}
