@@ -154,6 +154,9 @@ jobs:
               lines = text_variants[category]
 
               for folder in os.listdir(cat_path):
+                  if folder == "Roboto-Regular":
+                      continue
+
                   folder_path = os.path.join(cat_path, folder)
                   if not os.path.isdir(folder_path):
                       continue
@@ -353,6 +356,9 @@ jobs:
               data[category] = {}
 
               for folder in sorted(os.listdir(category_path), key=str.lower):
+                  if folder == "Roboto-Regular":
+                      continue
+
                   folder_path = os.path.join(category_path, folder)
 
                   if os.path.isdir(folder_path):

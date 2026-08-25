@@ -27,12 +27,30 @@ def save_state(state):
 def patch_font(custom_path, donor_path):
     custom = fontforge.open(custom_path, ("fstypepermitted",))
     donor = fontforge.open(donor_path, ("fstypepermitted",))
+
     if custom.em != donor.em:
         donor.em = custom.em
+
+    custom_unicodes = set(g.unicode for g in custom.glyphs() if g.unicode != -1)
+
+    donor.selection.none()
+    for g in donor.glyphs():
+        if g.unicode in custom_unicodes:
+            donor.selection.select(("more",), g.glyphname)
+
+    donor.clear()
+
+    for lookup in donor.gpos_lookups:
+        donor.removeLookup(lookup)
+    for lookup in donor.gsub_lookups:
+        donor.removeLookup(lookup)
+
     scaled_donor_path = "/tmp/_scaled_donor.ttf"
     donor.generate(scaled_donor_path)
+
     custom.mergeFonts(scaled_donor_path)
     custom.generate(custom_path)
+
     custom.close()
     donor.close()
 
