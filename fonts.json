@@ -23,14 +23,8 @@
       ]
     },
     "FluentUI": {
-      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_16.0.png",
+      "preview": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_17.0.png",
       "files": [
-        {
-          "filename": "FluentUI_16.0.ttf",
-          "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_16.0.ttf",
-          "size_bytes": 25207620,
-          "sha256": "38486aa7e7ba423c4acaf6556126d7c793680e5b63c78687b29d2c2f741a90e1"
-        },
         {
           "filename": "FluentUI_17.0.ttf",
           "download_url": "https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_17.0.ttf",

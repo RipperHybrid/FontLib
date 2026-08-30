@@ -10,7 +10,7 @@
 - <img src="https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Facebook/Facebook_16.0.png" width="200px" alt="Facebook">
 
 ### FluentUI
-- <img src="https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_16.0.png" width="200px" alt="FluentUI">
+- <img src="https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/FluentUI/FluentUI_17.0.png" width="200px" alt="FluentUI">
 
 ### Ios
 - <img src="https://raw.githubusercontent.com/RipperHybrid/FontLib/Master/Emoji/Ios/iOS26_v14.png" width="200px" alt="Ios">
