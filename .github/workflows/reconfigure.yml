@@ -112,16 +112,20 @@ jobs:
         shell: python
         run: |
           import os
+          from datetime import datetime
           from PIL import Image, ImageDraw, ImageFont
           import skia
 
           repo_dir = os.getcwd()
           allowed_ext = (".ttf", ".otf")
 
+          current_date = f"Last Update: {datetime.now().strftime('%d-%m-%Y')}"
+
           BG = (30, 37, 46)
           FG = (232, 237, 242)
           ACCENT = (77, 184, 255)
           WARNING_COLOR = (255, 77, 77)
+          DATE_COLOR = (150, 158, 165)
           W, H = 800, 450
           MARGIN = 40
           LINE_GAP = 22
@@ -223,8 +227,11 @@ jobs:
 
                           warn_font = ImageFont.truetype(font_path, 16)
                           warn_bbox = draw.textbbox((0, 0), warning_msg, font=warn_font)
-                          warn_w = warn_bbox[2] - warn_bbox[0]
-                          draw.text(((W - warn_w) / 2 - warn_bbox[0], H - 25 - warn_bbox[1]), warning_msg, font=warn_font, fill=WARNING_COLOR)
+                          draw.text((20 - warn_bbox[0], H - 25 - warn_bbox[1]), warning_msg, font=warn_font, fill=WARNING_COLOR)
+
+                          date_bbox = draw.textbbox((0, 0), current_date, font=warn_font)
+                          date_w = date_bbox[2] - date_bbox[0]
+                          draw.text((W - date_w - 20 - date_bbox[0], H - 25 - date_bbox[1]), current_date, font=warn_font, fill=DATE_COLOR)
 
                           img.save(out_path)
                       except Exception:
@@ -305,8 +312,11 @@ jobs:
 
                           warn_font = skia.Font(title_typeface, 16)
                           warn_paint = skia.Paint(Color=skia.ColorSetARGB(255, WARNING_COLOR[0], WARNING_COLOR[1], WARNING_COLOR[2]), AntiAlias=True)
-                          warn_w = warn_font.measureText(warning_msg)
-                          canvas.drawString(warning_msg, (W - warn_w) / 2, H - 15, warn_font, warn_paint)
+                          canvas.drawString(warning_msg, 20, H - 15, warn_font, warn_paint)
+
+                          date_paint = skia.Paint(Color=skia.ColorSetARGB(255, DATE_COLOR[0], DATE_COLOR[1], DATE_COLOR[2]), AntiAlias=True)
+                          date_w = warn_font.measureText(current_date)
+                          canvas.drawString(current_date, W - date_w - 20, H - 15, warn_font, date_paint)
 
                           image = surface.makeImageSnapshot()
                           image.save(out_path, skia.kPNG)
