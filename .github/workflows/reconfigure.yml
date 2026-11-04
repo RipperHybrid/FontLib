@@ -32,11 +32,6 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Set Up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
       - name: Check for new or changed fonts
         id: check
         shell: python
@@ -94,19 +89,22 @@ jobs:
         if: steps.check.outputs.needs_patch == 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y fontforge python3-fontforge
+          sudo apt-get install -y fontforge python3-fontforge python3-fonttools
+          echo "PYTHONPATH=/usr/lib/python3/dist-packages" >> $GITHUB_ENV
 
       - name: Patch Missing Font Glyphs
         if: steps.check.outputs.needs_patch == 'true'
+        env:
+          PYTHONPATH: /usr/lib/python3/dist-packages
         run: |
           set -o pipefail
-          fontforge -lang=py -script .github/scripts/patch_fonts.py 2>&1 | grep -vE "Bad device table|unexpected size for an instance"
+          fontforge -lang=py -script .github/scripts/patch_fonts.py 2>&1 | grep -vE "Bad device table|unexpected size for an instance" || true
 
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libfontconfig1 libgl1 libegl1 libglib2.0-0
-          pip install Pillow skia-python --break-system-packages
+          sudo apt-get install -y libfontconfig1 libgl1 libegl1 libglib2.0-0 python3-pip
+          sudo /usr/bin/python3 -m pip install Pillow skia-python
 
       - name: Auto-generate Font Previews
         shell: python
